@@ -2,9 +2,9 @@
 
 
 SpeechManager::SpeechManager() {
+	this->initSpeech();
 
-
-
+	this->createSpeaker();
 
 }
 
@@ -30,9 +30,35 @@ void SpeechManager::exitSystem() {
 	exit(0);
 }
 
+void SpeechManager::initSpeech()
+{
+	this->v1.clear();
+	this->v2.clear();
+	this->vVictory.clear();
+	this->m_Speaker.clear();
+	//
+	this->m_Index = 1;
+
+}
+
+void SpeechManager::createSpeaker()
+{
+	string nameSeed = "ABCDEFGHIJKL";
+	for (int i = 0; i < 12; i++) {
+		string name = "Ñ¡ÊÖ";
+		name += nameSeed[i];
+
+		Speaker sp;
+		sp.m_name = name;
+		sp.m_score[0] = 0;
+		sp.m_score[1] = 1;
+		this->v1.push_back(i + 10001);
+		this->m_Speaker.insert(make_pair(i + 10001, sp));
+	}
+
+}
+
 SpeechManager::~SpeechManager() {
-
-
 
 
 }

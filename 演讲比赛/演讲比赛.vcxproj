@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Speaker.cpp" />
     <ClCompile Include="speechManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="speaker.h" />
     <ClInclude Include="speechManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
