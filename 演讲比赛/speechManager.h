@@ -9,5 +9,8 @@ public:
 
 	void show_Menu();
 
+
+
+	void exitSystem();
 	~SpeechManager();
 };
