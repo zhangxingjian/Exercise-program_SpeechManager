@@ -3,6 +3,7 @@
 #include<vector>
 #include<map>
 #include"speaker.h"
+#include<algorithm>
 using namespace std;
 
 class SpeechManager {
@@ -11,13 +12,18 @@ public:
 	SpeechManager();
 
 	void show_Menu();
+
 	void exitSystem();
 
 	void initSpeech();
 
 	void createSpeaker();
 
+	void startSpeech();
+	
+	void speechDraw();
 
+	void speechContest();
 
 	~SpeechManager();
 
