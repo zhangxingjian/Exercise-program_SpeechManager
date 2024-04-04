@@ -4,6 +4,8 @@
 #include<map>
 #include"speaker.h"
 #include<algorithm>
+#include<deque>
+#include <numeric>
 using namespace std;
 
 class SpeechManager {
