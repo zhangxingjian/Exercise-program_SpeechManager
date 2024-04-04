@@ -27,6 +27,8 @@ public:
 
 	void speechContest();
 
+	void showScore();
+
 	~SpeechManager();
 
 

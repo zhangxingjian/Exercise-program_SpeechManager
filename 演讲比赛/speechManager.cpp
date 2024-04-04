@@ -65,15 +65,15 @@ void SpeechManager::startSpeech()
 	//2、比赛
 	speechContest();
 	//3、显示晋级结果
-
+	showScore();
 	//第二轮比赛
-
+	this->m_Index++;
 	//1、抽签
-
+	speechDraw();
 	//2、比赛
-
+	speechContest();
 	//3、显示最终结果
-
+	showScore();
 	//4、保存分数
 }
 
@@ -166,6 +166,29 @@ void SpeechManager::speechContest()
 
 	cout << "------------- 第" << this->m_Index << "轮比赛完毕  ------------- " << endl;
 	system("pause");
+}
+
+void SpeechManager::showScore()
+{
+	cout << "---------第" << this->m_Index << "轮晋级选手信息如下：-----------" << endl;
+	vector<int>v;
+	if (this->m_Index == 1)
+	{
+		v = v2;
+	}
+	else
+	{
+		v = vVictory;
+	}
+	for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
+	{
+		cout << "选手编号：" << *it << " 姓名： " << m_Speaker[*it].m_name << " 得分： " << m_Speaker[*it].m_score[this->m_Index - 1] << endl;
+	}
+	cout << endl;
+
+	system("pause");
+	system("cls");
+	this->show_Menu();
 }
 
 
